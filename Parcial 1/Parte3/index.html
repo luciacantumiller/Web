@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+<script>
+
+let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogelio','Bertha'];
+
+
+/*
+### F1 Crea una funcion llamada mayusculas que reciba como parámetro un arreglo y convierta todos los nombres a mayusula y los escriba en la consola
+*/
+
+// CREA TU FUNCION mayusculas aqui:
+
+function mayusculas(arregloNombres) { 
+    const arrregloMayusculas = arregloNombres.map(nombre => nombre.toUpperCase());
+    console.log(arrregloMayusculas);
+} 
+
+
+
+/*
+### F2 Crea una funcion llamada numVocales que reciba como parámetro un arreglo y cuente el numero de vocales de cada elemento y escriba en consola "datos: tiene  vocales , para cada elemento del arreglo" 
+*/
+
+// CREA TU FUNCION numVocales aqui:
+
+function numVocales(nombre){
+    // for(var x = 0; x < nombre.length; x++) {
+        var vocales = 0;
+        for (var i = 0; i <= nombre.length - 1; i++) {
+            if (nombre.charAt(i).toLowerCase() == "a" || nombre.charAt(i).toLowerCase() == "e" || nombre.charAt(i).toLowerCase() == "i" || nombre.charAt(i).toLowerCase() == "o" || nombre.charAt(i).toLowerCase() == "u") {
+                vocales += 1;
+            }
+        }
+        console.log(nombre + ": tiene " + vocales + " vocales")
+    // }
+}
+
+
+/*
+### F3 Crea una funcion llamada numVocalesArr que reciba un arreglo y mande llamar a la funcion numVocales para que escriba la longitud de cada elemento del arreglo." 
+*/
+
+// CREA TU FUNCION numVocalesArr aqui:
+
+function numVocalesArr(arregloNombres) {
+    for(var x = 0; x < arregloNombres.length; x++) {
+        numVocales(arregloNombres[x]);
+    }
+}
+
+
+
+/* 
+################ OBJETOS ###############
+
+A) Define un objeto tipo "Perro" que reciba 3 parametros
+
+1) Nombre
+2) Color
+3) Raza
+
+
+B) Crea 3 objectos  con diferentes valores
+
+C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte. 
+
+
+*****BONUS****
+
+Crea una método en la definición del objeto "Perro" llamado printInfo()  que escriba en consola todas las propiedades del objeto que lo invoca. 
+
+EJ
+
+fido.printInfo();
+
+Deberia escribir en consola
+
+"Nombre: Fido , De color: Cafe , Raza: Poodle"
+
+
+*/
+function Perro(nombre, color, raza) {
+  this.nombre = nombre;
+  this.color = color;
+  this.raza = raza;
+  this.displayInfo = displayInfo;
+}
+
+function displayInfo(){ 
+    console.log(`Nombre: ${this.nombre}, De Color: ${this.color}, Raza: ${this.raza}`); 
+}
+
+
+/***
+ * 
+ *        PRUEBA TUS FUNCIONES
+ * 
+ ***/
+
+// F1
+console.log("PRUEBA FUNCION 1");
+console.log(mayusculas(nombres));
+
+// F2
+console.log("PRUEBA FUNCION 2");
+console.log(numVocales(nombres[1]));
+
+// F3
+console.log("PRUEBA FUNCION 3");
+console.log(numVocalesArr(nombres));
+
+
+
+/***
+ * 
+ *        PRUEBA TUS OBJETOS
+ * 
+ ***/
+
+console.log("PRUEBA OBJETOS");
+
+var perro1 = new Perro('Max', 'Cafe', 'Golden');
+var perro2 = new Perro('Mia', 'Negro', 'Schnauzer');
+var perro3 = new Perro('Fido', 'Blanco', 'Poodle');
+
+console.log(perro1.nombre, perro2.color, perro3.raza);
+perro1.displayInfo();
+
+
+</script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
