@@ -1,0 +1,5 @@
+{
+    "node_port": 8080,
+    "connectionString": "",
+    "secret": "abcd"
+}
