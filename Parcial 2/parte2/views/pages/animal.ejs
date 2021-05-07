@@ -1,0 +1,23 @@
+<%- include('../template/head') -%>
+
+<div class="container">
+
+  <% if(animal == null){ %>
+  <h2> Sorry no data for that animal! </h2>
+  <% } %>
+
+  <% if(animal != null){ %>
+
+  <div>
+      <ul>
+          <p> Type: <%= animal.animalType %></p>
+          <p> Pet: <%= animal.pet %></p>
+          <p> Fiercness: <%= animal.fiercness %></p>
+      </ul>
+    </hr>
+  </div>
+  <% } %>
+
+</div>
+  
+<%- include('../template/footer') -%>

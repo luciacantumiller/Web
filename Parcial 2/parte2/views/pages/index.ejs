@@ -1,0 +1,21 @@
+<%- include('../template/head') -%>
+
+<div class="container">
+
+  <div>
+
+      <ul>
+        <% for (var i = 0; i < allPets.length; i++){ %>
+          <p> Type: <%= allPets[i].animalType %></p>
+          <p> Pet: <%= allPets[i].pet %></p>
+          <p> Fiercness: <%= allPets[i].fiercness %></p>
+          <hr/>
+        <% } %>
+      </ul>
+    </hr>
+  </div>
+   
+
+</div>
+  
+<%- include('../template/footer') -%>
